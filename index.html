@@ -2,8 +2,39 @@
 <html>
   <head>
     <script src="https://unpkg.com/htmx.org@1.9.4" integrity="sha384-zUfuhFKKZCbHTY6aRR46gxiqszMk5tcHjsVFxnUo8VMus4kHGVdIYVbOYYNlKmHV" crossorigin="anonymous"></script>
+    <style>
+      .strip {
+        display:flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+      }
+
+      .strip > * {
+        padding-right: 10px;
+      }
+    </style>
   </head>
   <body>
+    <div class="strip">
+      <img src="/static/logo.svg">
+      <h1>Jackson's Games</h1>
+    </div>
+    <div class="strip">
+      <a
+        href="/home"
+        hx-get="/home" 
+        hx-target="#myTarget" 
+        hx-swap="innerHTML">
+        Home
+      </a>
+      <a
+        href="/downloads"
+        hx-get="/downloads" 
+        hx-target="#myTarget" 
+        hx-swap="innerHTML">
+        Downloads
+      </a>
+    </div>
     <div id="myTarget" hx-get="/home" hx-trigger="load" hx-swap="innerHTML">
       Loading...
     </div>
