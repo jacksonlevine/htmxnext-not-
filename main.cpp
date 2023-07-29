@@ -18,11 +18,11 @@ int main()
     });
 
     CROW_ROUTE(app, "/home")([](){
-        return "You've arrived Home!";
+        return load_file("./views/home.html");
     });
 
     CROW_ROUTE(app, "/downloads")([](){
-        return "Hello world yo!";
+        return load_file("./views/downloads.html");
     });
 
     app.port(8080).multithreaded().run();
