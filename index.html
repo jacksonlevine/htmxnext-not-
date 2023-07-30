@@ -34,6 +34,28 @@
         hx-swap="innerHTML">
         Downloads
       </a>
+      <a
+        href="/register/form"
+        hx-get="/register/form" 
+        hx-target="#myTarget" 
+        hx-swap="innerHTML">
+        Register
+      </a>
+      <a
+        href="/login/form"
+        hx-get="/login/form" 
+        hx-target="#myTarget" 
+        hx-swap="innerHTML">
+        Login
+      </a>
+      <a
+        href="/logout"
+        hx-post="/logout"
+        hx-swap="innerHTML"
+        hx-target="#myTarget"
+        >
+        Logout
+      </a>
     </div>
     <div id="myTarget" hx-get="/home" hx-trigger="load" hx-swap="innerHTML">
       Loading...
